@@ -11,7 +11,7 @@ get '/api/posts/:id' do
 end
 
 get '/posts' do
-  erb :posts, locals: { quizzes: Quiz.all }
+  erb :posts, locals: { quizzes: Quiz.order('id') }
 end
 
 get '/posts/:id/edit' do

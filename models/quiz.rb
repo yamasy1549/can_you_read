@@ -1,5 +1,5 @@
 require 'dotenv'
-Dotenv.load!
+Dotenv.load
 
 ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
 
