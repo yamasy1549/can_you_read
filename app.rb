@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require './models/quiz.rb'
-require 'pry'
 
 get '/api/posts' do
   Quiz.all.to_json
