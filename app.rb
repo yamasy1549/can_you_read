@@ -34,10 +34,10 @@ post '/quizzes/create' do
 
   quiz = Quiz.new(params)
 
-  if quiz.save!
+  if quiz.save
     redirect to('/quizzes', 200)
   else
-    redirect to('/quizzes/:id/edit')
+    redirect to('/quizzes/new')
   end
 end
 
@@ -55,6 +55,6 @@ post '/quizzes/:id/update' do |params|
   if quiz.update(update_params)
     redirect to('/quizzes', 200)
   else
-    redirect to('/quizzes/:id/edit')
+    redirect to("/quizzes/#{params}/edit")
   end
 end
