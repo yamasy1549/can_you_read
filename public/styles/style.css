@@ -1,0 +1,98 @@
+html {
+  font-size: 1rem;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  padding: 20px;
+}
+
+.top {
+  background: #7BAF9A;
+  padding: 0;
+  border: 0;
+}
+
+.top a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.quizzes-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.quizzes-list .quiz {
+  width: 280px;
+  margin: 30px 20px 0 0;
+}
+
+.quizzes-list a {
+  text-decoration: none;
+}
+
+.quizzes-list .name {
+  color: #725E7E;
+}
+
+.quizzes-list .kanji {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.quizzes-list .prefecture {
+  padding: 5px 8px;
+  background: #80B59B;
+  color: #FFFFFF;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+.quizzes-list .level {
+  padding: 5px 8px;
+  background: #395E7C;
+  color: #FFFFFF;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+.quizzes-list .hint {
+  margin: 6px 0;
+  color: #666666;
+  font-size: 0.7rem;
+}
+
+.quiz-edit .item {
+  margin: 20px 0;
+}
+
+.quiz-edit label {
+  display: block;
+  margin-bottom: 6px;
+  color: #725E7E;
+  letter-spacing: 1px;
+}
+
+.quiz-edit input,
+.quiz-edit textarea {
+  width: 100%;
+  padding-bottom: 4px;
+  border: 0;
+  border-bottom: 1px solid #725E7E;
+}
+
+.quiz-edit input:focus,
+.quiz-edit textarea:focus {
+  outline: 0;
+  border-bottom: 2px solid #725E7E;
+}
+
+.quiz-edit .submit {
+  width: 100%;
+  padding: 10px 20px;
+  background: #FE8832;
+  color: #FFFFFF;
+  border: 0;
+}

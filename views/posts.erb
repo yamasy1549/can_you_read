@@ -1,22 +1,16 @@
-<h1>All</h1>
-<table>
-    <tr>
-      <th>kanji</th>
-      <th>kana</th>
-      <th>prefecture</th>
-      <th>level</th>
-      <th>hint</th>
-      <th></th>
-    </tr>
+<h1>難読地名いちらん</h1>
+<ul class='quizzes-list'>
   <% quizzes.each do |quiz| %>
-    <tr>
-      <td><%= quiz.kanji %></td>
-      <td><%= quiz.kana %></td>
-      <td><%= quiz.prefecture %></td>
-      <td><%= quiz.level %></td>
-      <td><%= quiz.hint %></td>
-      <td><a href='/posts/<%= quiz.id %>/edit'>edit</a></td>
-    </tr>
+    <li class='quiz'>
+      <a href='/posts/<%= quiz.id %>/edit'>
+        <ruby class='name'>
+          <span class='kanji'><%= quiz.kanji %></span>
+          <rt><%= quiz.kana %></rt>
+        </ruby>
+      </a>
+      <span class='prefecture'><%= quiz.prefecture %></span>
+      <span class='level'>Lv.<%= quiz.level %></span>
+      <p class='hint'><%= quiz.hint %></p>
+    </li>
   <% end %>
-</table>
-
+</ul>
