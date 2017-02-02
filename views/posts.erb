@@ -1,0 +1,22 @@
+<h1>All</h1>
+<table>
+    <tr>
+      <th>kanji</th>
+      <th>kana</th>
+      <th>prefecture</th>
+      <th>level</th>
+      <th>hint</th>
+      <th></th>
+    </tr>
+  <% quizzes.each do |quiz| %>
+    <tr>
+      <td><%= quiz.kanji %></td>
+      <td><%= quiz.kana %></td>
+      <td><%= quiz.prefecture %></td>
+      <td><%= quiz.level %></td>
+      <td><%= quiz.hint %></td>
+      <td><a href='/posts/<%= quiz.id %>/edit'>edit</a></td>
+    </tr>
+  <% end %>
+</table>
+

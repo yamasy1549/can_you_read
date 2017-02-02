@@ -1,0 +1,24 @@
+<h1>Edit</h1>
+<form action='update' method='POST'>
+  <div>
+    <label for='kanji'>kanji : </label>
+    <input id='kanji' name='post[kanji]' value='<%= quiz.kanji %>' />
+  </div>
+  <div>
+    <label for='kana'>kana : </label>
+    <input id='kana' name='post[kana]' value='<%= quiz.kana %>' />
+  </div>
+  <div>
+    <label for='prefecture'>prefecture : </label>
+    <input id='prefecture' name='post[prefecture]' value='<%= quiz.prefecture %>' />
+  </div>
+  <div>
+    <label for='level'>level : </label>
+    <input id='level' name='post[level]' value='<%= quiz.level %>' type='number' />
+  </div>
+  <div>
+    <label for='hint'>hint : </label>
+    <textarea id='hint' name='post[hint]'><%= quiz.hint %></textarea>
+  </div>
+  <button type='submit'>Update</button>
+</form>
