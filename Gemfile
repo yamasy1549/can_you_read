@@ -4,4 +4,5 @@ gem 'rake'
 gem 'sinatra'
 gem 'activerecord'
 gem 'sinatra-activerecord'
-gem 'sqlite3'
+gem 'sqlite3', groups: %w(test development)
+gem 'pg', groups: %w(production)
