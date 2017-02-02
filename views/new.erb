@@ -14,12 +14,16 @@
     <input id='prefecture' name='quiz[prefecture]' />
   </div>
   <div class='item'>
-    <label for='level'>Level</label>
+    <label for='level'>Level (1~5)</label>
     <input id='level' name='quiz[level]' type='number' />
   </div>
   <div class='item'>
-    <label for='hint'>Hint</label>
-    <textarea id='hint' name='quiz[hint]'></textarea>
+    <label for='hint'>Hint (1~)</label>
+    <input id='hint' name='quiz[hint]' type='number' />
+  </div>
+  <div class='item'>
+    <label for='description'>Description</label>
+    <textarea id='description' name='quiz[description]'></textarea>
   </div>
   <button type='submit' class='submit'>Create</button>
 </form>

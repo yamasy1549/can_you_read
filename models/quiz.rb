@@ -10,4 +10,6 @@ class Quiz < ActiveRecord::Base
   validates :kana, presence: true
   validates :prefecture, presence: true
   validates :level, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 1, less_than_or_equal_to: 5 }
+  validates :description, presence: true
+  validates :hint, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
 end

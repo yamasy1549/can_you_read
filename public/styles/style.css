@@ -50,7 +50,8 @@ html {
   letter-spacing: 1px;
 }
 
-.quizzes-list .level {
+.quizzes-list .level,
+.quizzes-list .hint {
   padding: 5px 8px;
   background: #395E7C;
   color: #FFFFFF;
@@ -58,7 +59,7 @@ html {
   letter-spacing: 1px;
 }
 
-.quizzes-list .hint {
+.quizzes-list .description {
   margin: 6px 0;
   color: #666666;
   font-size: 0.7rem;

@@ -25,11 +25,12 @@ end
 post '/quizzes/create' do
   form = request.env['rack.request.form_hash']['quiz']
   params = {
-    kanji:      form['kanji'],
-    kana:       form['kana'],
-    prefecture: form['prefecture'],
-    level:      form['level'],
-    hint:       form['hint']
+    kanji:       form['kanji'],
+    kana:        form['kana'],
+    prefecture:  form['prefecture'],
+    level:       form['level'],
+    description: form['description'],
+    hint:        form['hint']
   }
 
   quiz = Quiz.new(params)
@@ -44,11 +45,12 @@ end
 post '/quizzes/:id/update' do |params|
   form = request.env['rack.request.form_hash']['quiz']
   update_params = {
-    kanji:      form['kanji'],
-    kana:       form['kana'],
-    prefecture: form['prefecture'],
-    level:      form['level'],
-    hint:       form['hint']
+    kanji:       form['kanji'],
+    kana:        form['kana'],
+    prefecture:  form['prefecture'],
+    level:       form['level'],
+    description: form['description'],
+    hint:        form['hint']
   }
   quiz = Quiz.find(params)
 

@@ -7,11 +7,12 @@ task :load_csv do
 
   CSV.foreach('name_of_place.csv', headers: true) do |data|
     quiz = Quiz.new({
-      kanji:      data['name'],
-      kana:       data['kana'],
-      prefecture: data['prefecture'],
-      level:      1,
-      hint:       data['description']
+      kanji:       data['name'],
+      kana:        data['kana'],
+      prefecture:  data['prefecture'],
+      level:       1,
+      description: data['description'],
+      hint:        1
     })
 
     if quiz.save
