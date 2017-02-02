@@ -1,24 +1,24 @@
-<h1>へんしゅう</h1> <button class='top'><a href='<%= uri('/posts') %>'>戻る</a></button>
+<h1>へんしゅう</h1> <button class='top'><a href='<%= uri('/quizzes') %>'>戻る</a></button>
 <form action='update' method='POST' class='quiz-edit'>
   <div class='item'>
     <label for='kanji'>Kanji</label>
-    <input id='kanji' name='post[kanji]' value='<%= quiz.kanji %>' />
+    <input id='kanji' name='quiz[kanji]' value='<%= quiz.kanji %>' />
   </div>
   <div class='item'>
     <label for='kana'>Kana</label>
-    <input id='kana' name='post[kana]' value='<%= quiz.kana %>' />
+    <input id='kana' name='quiz[kana]' value='<%= quiz.kana %>' />
   </div>
   <div class='item'>
     <label for='prefecture'>Prefecture</label>
-    <input id='prefecture' name='post[prefecture]' value='<%= quiz.prefecture %>' />
+    <input id='prefecture' name='quiz[prefecture]' value='<%= quiz.prefecture %>' />
   </div>
   <div class='item'>
     <label for='level'>Level</label>
-    <input id='level' name='post[level]' value='<%= quiz.level %>' type='number' />
+    <input id='level' name='quiz[level]' value='<%= quiz.level %>' type='number' />
   </div>
   <div class='item'>
     <label for='hint'>Hint</label>
-    <textarea id='hint' name='post[hint]'><%= quiz.hint %></textarea>
+    <textarea id='hint' name='quiz[hint]'><%= quiz.hint %></textarea>
   </div>
   <button type='submit' class='submit'>Update</button>
 </form>

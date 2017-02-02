@@ -2,24 +2,24 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require './models/quiz.rb'
 
-get '/api/posts' do
+get '/api/quizzes' do
   Quiz.all.to_json
 end
 
-get '/api/posts/:id' do
+get '/api/quizzes/:id' do
   Quiz.find(params[:id]).to_json
 end
 
-get '/posts' do
-  erb :posts, locals: { quizzes: Quiz.order('id') }
+get '/quizzes' do
+  erb :index, locals: { quizzes: Quiz.order('id') }
 end
 
-get '/posts/:id/edit' do
+get '/quizzes/:id/edit' do
   erb :edit, locals: { quiz: Quiz.find(params[:id]) }
 end
 
-post '/posts/:id/update' do |params|
-  form = request.env['rack.request.form_hash']['post']
+post '/quizzes/:id/update' do |params|
+  form = request.env['rack.request.form_hash']['quiz']
   update_params = {
     kanji:      form['kanji'],
     kana:       form['kana'],
@@ -31,8 +31,8 @@ post '/posts/:id/update' do |params|
   quiz = Quiz.find(params)
 
   if quiz.update(update_params)
-    redirect to('/posts', 200)
+    redirect to('/quizzes', 200)
   else
-    redirect to('/posts/:id/edit')
+    redirect to('/quizzes/:id/edit')
   end
 end

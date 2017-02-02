@@ -2,7 +2,7 @@
 <ul class='quizzes-list'>
   <% quizzes.each do |quiz| %>
     <li class='quiz'>
-      <a href='/posts/<%= quiz.id %>/edit'>
+      <a href='/quizzes/<%= quiz.id %>/edit'>
         <ruby class='name'>
           <span class='kanji'><%= quiz.kanji %></span>
           <rt><%= quiz.kana %></rt>
