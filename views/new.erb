@@ -1,0 +1,24 @@
+<h1>ついか</h1> <button class='top'><a href='<%= uri('/quizzes') %>'>戻る</a></button>
+<form action='create' method='POST' class='quiz-edit'>
+  <div class='item'>
+    <label for='kanji'>Kanji</label>
+    <input id='kanji' name='quiz[kanji]' />
+  </div>
+  <div class='item'>
+    <label for='kana'>Kana</label>
+    <input id='kana' name='quiz[kana]' />
+  </div>
+  <div class='item'>
+    <label for='prefecture'>Prefecture</label>
+    <input id='prefecture' name='quiz[prefecture]' />
+  </div>
+  <div class='item'>
+    <label for='level'>Level</label>
+    <input id='level' name='quiz[level]' type='number' />
+  </div>
+  <div class='item'>
+    <label for='hint'>Hint</label>
+    <textarea id='hint' name='quiz[hint]'></textarea>
+  </div>
+  <button type='submit' class='submit'>Create</button>
+</form>
