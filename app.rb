@@ -55,7 +55,7 @@ post '/quizzes/:id/update' do |params|
   quiz = Quiz.find(params)
 
   if quiz.update(update_params)
-    redirect to('/quizzes', 200)
+    redirect to("/quizzes?id=#{form['id']}", 200)
   else
     redirect to("/quizzes/#{params}/edit")
   end

@@ -26,5 +26,6 @@
     <label for='description'>Description</label>
     <textarea id='description' name='quiz[description]'><%= quiz.description %></textarea>
   </div>
+  <input id='id' name='quiz[id]' type='hidden' value='<%= quiz.id %>' />
   <button type='submit' class='submit'>Update</button>
 </form>
