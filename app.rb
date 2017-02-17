@@ -12,6 +12,13 @@ get '/api/quizzes/:id' do
   Quiz.find(params[:id]).to_json
 end
 
+get '/api/quizzes/random/:count' do
+  headers 'Access-Control-Allow-Origin' => '*'
+  range = [*Quiz.first.id..Quiz.last.id]
+  count = params[:count].to_i
+  Quiz.where(id: range.sample(count)).to_json
+end
+
 get '/quizzes' do
   erb :index, locals: { quizzes: Quiz.order('id') }
 end
