@@ -3,10 +3,12 @@ require 'sinatra/activerecord'
 require './models/quiz.rb'
 
 get '/api/quizzes' do
+  headers 'Access-Control-Allow-Origin' => '*'
   Quiz.all.to_json
 end
 
 get '/api/quizzes/:id' do
+  headers 'Access-Control-Allow-Origin' => '*'
   Quiz.find(params[:id]).to_json
 end
 
