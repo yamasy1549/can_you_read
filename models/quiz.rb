@@ -4,7 +4,7 @@ Dotenv.load
 ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
 
 class Quiz < ActiveRecord::Base
-  self.table_name = 'quizes' if ENV['RACK_ENV'] == 'development'
+  self.table_name = 'quizzes'
 
   validates :kanji, presence: true
   validates :kana, presence: true
