@@ -5,11 +5,10 @@ require './models/quiz.rb'
 task :load_csv do
   require 'csv'
   require 'jp_prefecture'
-  require 'pry'
 
   pref = JpPrefecture::Prefecture
 
-  CSV.foreach('my_database.sql', headers: true) do |data|
+  CSV.foreach('name_of_place.csv', headers: true) do |data|
     prefecture = pref.find(name: data['prefecture'])
 
     quiz = Quiz.new({
@@ -36,7 +35,6 @@ task :convert_prefecture_code do
   pref = JpPrefecture::Prefecture
 
   Quiz.all.each do |quiz|
-    binding.pry
     prefecture = pref.find(name: quiz.prefecture)
 
     if quiz.update(prefecture_code: prefecture.code)
